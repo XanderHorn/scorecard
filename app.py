@@ -111,10 +111,10 @@ with st.sidebar:
         unsafe_allow_html=True)
         create_scorecard = st.button("Create Scorecard")
 
-     st.markdown("""
-        ## Contact Information
-        If you have any questions or need further assistance, please feel free to reach out to me at [xanderhorn@hotmail.com](mailto:xanderhorn@hotmail.com).
-        """)
+    st.markdown("""
+    ## Contact Information
+    If you have any questions or need further assistance, please feel free to reach out to me at [xanderhorn@hotmail.com](mailto:xanderhorn@hotmail.com).
+    """)
 
 if use_sample_data == True:
     st.warning("🚨 Using sample data. Upload your own data in the sidebar to create your own scorecard.")
