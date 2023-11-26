@@ -22,7 +22,7 @@ class Binning(BaseEstimator, TransformerMixin):
 
     def is_numeric_feature(self):
         feature_type = self.data[self.x].dtype
-        if feature_type in ['int64', 'float64']:
+        if feature_type in ['int64', 'int32', 'float64', 'float32']:
             return True
         else:
             return False
@@ -210,7 +210,7 @@ class Binning(BaseEstimator, TransformerMixin):
 
     def preprocess_df(self):
 
-        features_dtypes = self.data.select_dtypes(include=['int64', 'float64', 'object', 'bool']).columns
+        features_dtypes = self.data.select_dtypes(include=['int64', 'int32', 'float32', 'float64', 'object', 'bool']).columns
         bools = self.data.select_dtypes(include=['bool']).columns
         if len(bools) > 0:
             for feature in bools:
